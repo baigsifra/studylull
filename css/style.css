@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F4F1DE;
+}
+
+#menu-img {
+    max-height: 30px;
+    margin-left: 15px;
+    display: none;
+}
+
+.main-nav {
+    background-color: #3D405B;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul {
+    list-style: none;
+}
+
+.main-nav ul:hover {
+    cursor: default;
+}
+
+.main-nav ul li h2 {
+    font-size: 28px;
+}
+
+.main-nav ul li h2:hover {
+    cursor: default;
+}
+
+.main-nav ul li button {
+    width: fit-content;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+}
+
+.main-nav ul li button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+@media screen and (min-width: 480px) {
+    
+    .main-nav {
+        width: 100%;
+        height: 100px;
+        justify-content: center;
+    }
+    
+    .main-nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .main-nav ul li {
+        width: fit-content;
+        display: inline-block;
+        background: none;
+        margin: 0px 10px;
+        padding: 0px 5px;
+    }
+
+    #title { order: 2; }
+    .main-nav ul :nth-child(2) { order: 1; }
+    .main-nav ul :nth-child(3) { order: 1; }
+    .main-nav ul :nth-child(4) { order: 1; }
+    .main-nav ul :nth-child(5) { order: 3; }
+    .main-nav ul :nth-child(6) { order: 3; }
+    .main-nav ul :nth-child(7) { order: 3; }
+}
+
+@media screen and (max-width: 480px) {
+    .main-nav {
+        width: 100%;
+        height: 50px;
+        justify-content: flex-start;
+    }
+
+    .main-nav ul {
+        display: block;
+    }
+
+    #menu-img {
+        display: block;
+    }
+    
+    .nav-link {
+        margin: 0;
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    #title {
+        display: inline-block;
+        margin-left: 15px;
+    }
+
+    .main-nav ul {
+        padding: 0;
+        width: fit-content;
+    }
+}
