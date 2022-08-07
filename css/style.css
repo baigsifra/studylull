@@ -6,6 +6,7 @@
 
 body {
     background-color: #F4F1DE;
+    font-family: 'Karla', sans-serif;
 }
 
 .babypink { background-color: #F0C1B7; }
@@ -210,6 +211,14 @@ body {
     #main-nav ul :nth-child(7) { order: 3; }
 }
 
+#instructions {
+    margin:auto;
+    left:50%;
+    font-size:100px;
+    text-align: center;
+    padding-top: 50px;
+}
+
 @media screen and (max-width: 480px) {
     #main-nav {
         width: 100%;
@@ -230,6 +239,7 @@ body {
         display: block;
         position: relative;
         width: 100%;
+        font-family: 'Karla', sans-serif;
     }
 
     #title {
