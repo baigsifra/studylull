@@ -93,18 +93,40 @@ var factList = ["Mercury is the fastest planet in our solar system. It zips arou
 "Neutron stars are the densest and tiniest stars in the known universe and although they only have a radius of about 10 km (6 mi), they may have a mass of a few times that of the Sun. They can rotate at up to 60 times per second... and have been known to spin as fast as 600-712 times per second because of their physics.",
 "Made of three quarters hydrogen and helium for most of its remaining mass, the Sun accounts for 99.86% of the mass in our solar system with a mass of around 330,000 times that of Earth."];
 
+var taskList = ["Get a bottle of water", "Clean your desk", "Get a snack", "Complete something on your to do list", "Fold some laundry", "Wash your hands", "Take a shower"];
+
 var gen = document.getElementById("gen");
 var fact = document.getElementById("fact");
+
+var factOrTask = 0;
 var count = 0;
 
 gen.addEventListener("click", displayFact);
 
+function setF(){
+    factOrTask = 0;
+}
+
+function setT(){
+    factOrTask = 1;
+}
+
 function displayFact(){
-  fact.innerHTML = factList[count];
-  count++;
-  console.log(count);
-  if (count == factList.length){
-    count = 0;
-    console.log("fjdajfdalsdljsa");
-  }
+    if (factOrTask==0){
+        fact.innerHTML = factList[count];
+        count++;
+        console.log(count);
+        if (count == factList.length){
+        count = 0;
+        }
+    } else if (factOrTask==1){
+        fact.innerHTML = taskList[count];
+        count++;
+        console.log(count);
+        if (count == taskList.length){
+        count = 0;
+        }
+
+    }
+        
 }
