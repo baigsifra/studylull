@@ -83,6 +83,10 @@
         <section id="puzzle" style="display: none;">
             <div class="puzzle-container">
                 <div id="pieces"></div>
+                <div class="buttons center" style="width: 100%;">
+                    <button type="button" class="genBtn" id="ezBtn" onclick="loadPuzzle(3, 3)">Easy</button>
+                    <button type="button" class="genBtn" id="regBtn" onclick="loadPuzzle(5, 5)">Regular</button>
+                </div>
             </div>
         </section>
         <section id="generator" style="display: none;">
@@ -97,7 +101,6 @@
             <div class="buttons center">
                 <button type="button" class="genBtn" id="factBtn" onclick="setF()">Facts</button>
                 <button type="button" class="genBtn" id="taskBtn" onclick="setT()">Tasks</button>
-
             </div>
             
         </section>

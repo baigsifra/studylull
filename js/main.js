@@ -14,7 +14,7 @@ let factList = ["Mercury is the fastest planet in our solar system. It zips arou
 "Neutron stars are the densest and tiniest stars in the known universe and although they only have a radius of about 10 km (6 mi), they may have a mass of a few times that of the Sun. They can rotate at up to 60 times per second... and have been known to spin as fast as 600-712 times per second because of their physics.",
 "Made of three quarters hydrogen and helium for most of its remaining mass, the Sun accounts for 99.86% of the mass in our solar system with a mass of around 330,000 times that of Earth."];
 let taskList = ["Get a bottle of water", "Clean your desk", "Get a snack", "Complete something on your to do list", "Fold some laundry", "Wash your hands", "Take a shower"];
-let factOrTask = 0, count = 0, seconds = 0, breatheSeconds = 0, rows = 5, columns = 5;
+let factOrTask = 0, count = 0, seconds = 0, breatheSeconds = 0;
 let breatheTracker = "in";
 
 let currTile, otherTile;
@@ -37,7 +37,7 @@ function changeNav(name) {
             nav.setAttribute('class', 'terracotta');
             break;
         case ('puzzle'):
-            loadPuzzle();
+            loadPuzzle(5, 5);
             nav.setAttribute('class', 'independence');
             break;
         case ('generator'):
@@ -133,7 +133,7 @@ function changePlaylist() {
     window.onload;
 }
 
-function loadPuzzle() {
+function loadPuzzle(rows, columns) {
     document.getElementById('pieces').innerHTML = '';
 
     let pieces = [];
@@ -150,19 +150,39 @@ function loadPuzzle() {
         pieces[j] = tmp;
     }
 
-    for(let i = 0; i < pieces.length; i++) {
-        let tile = document.createElement('img');
-        tile.src = `img/puzzle/${pieces[i]}.png`;
+    if(rows == 3) {
+        for(let i = 0; i < pieces.length; i++) {
+            let tile = document.createElement('img');
+            tile.src = `img/puzzle/ez/${pieces[i]}.png`;
 
-        tile.addEventListener('dragstart', dragStart);
-        tile.addEventListener('dragover', dragOver);
-        tile.addEventListener('dragenter', dragEnter);
-        tile.addEventListener('dragleave', dragLeave);
-        tile.addEventListener('drop', dragDrop);
-        tile.addEventListener('dragend', dragEnd);
+            tile.style.width = '131px';
+            tile.style.height = '131px';
+
+            tile.addEventListener('dragstart', dragStart);
+            tile.addEventListener('dragover', dragOver);
+            tile.addEventListener('dragenter', dragEnter);
+            tile.addEventListener('dragleave', dragLeave);
+            tile.addEventListener('drop', dragDrop);
+            tile.addEventListener('dragend', dragEnd);
 
 
-        document.getElementById('pieces').append(tile);
+            document.getElementById('pieces').append(tile);
+        }
+    } else {
+        for(let i = 0; i < pieces.length; i++) {
+            let tile = document.createElement('img');
+            tile.src = `img/puzzle/reg/${pieces[i]}.png`;
+
+            tile.addEventListener('dragstart', dragStart);
+            tile.addEventListener('dragover', dragOver);
+            tile.addEventListener('dragenter', dragEnter);
+            tile.addEventListener('dragleave', dragLeave);
+            tile.addEventListener('drop', dragDrop);
+            tile.addEventListener('dragend', dragEnd);
+
+
+            document.getElementById('pieces').append(tile);
+        }
     }
 }
 

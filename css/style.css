@@ -136,6 +136,7 @@ body {
 }
 
 .instructions ol input {
+    width: 250px;
     font-size: 16px;
     padding: 5px 10px;
     border-radius: 15px;
@@ -151,7 +152,7 @@ body {
     width: 399px;
     height: 400px;
     border: 2px solid rgb(56, 0, 56);
-    margin: 0 15px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     float: left;
@@ -166,7 +167,11 @@ body {
 .puzzle-container {
     width: fit-content;
     height: fit-content;
-    margin: 30px auto 0;
+    margin: 5px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (min-width: 480px) {
@@ -228,7 +233,7 @@ body {
     background-color: #ffffff;
     border-radius: 30px;
     padding: 10px;
-    margin: 100px;
+    margin: 30px 50px;
     margin-top: 50px;
     
 }
@@ -236,10 +241,10 @@ body {
 #gen {
     background-color: #81B29A;
     text-align:center;
-    margin: 10px;
+    margin: 5px 10px;
     justify-content: center;
     left:50%;
-    padding: 30px;
+    padding: 15px 30px;
     font-size: 42px;
 }
 
@@ -254,7 +259,7 @@ button:active{
 
 .genBtn {
     background-color: #F2CC8F;
-    margin: 10px 40px 40px 20px;
+    margin: 10px 40px 0px 20px;
 }
 
 .genBtn:hover{
@@ -275,7 +280,7 @@ button:active{
     display:flex;
     justify-content:center;
     padding:20px;
-    margin: 40px;
+    margin: 0px 40px;
 }
 
 .center {
