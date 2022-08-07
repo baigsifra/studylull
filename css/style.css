@@ -425,7 +425,7 @@ p{
     height: 400px;
   }
 
-  .container {
+  .cont {
     overflow: hidden;
     display: flex;
     height: 400px;
@@ -434,7 +434,7 @@ p{
     margin-top: 14px;
   }
 
-  .container div {
+  .cont div {
     height: 400px;
     min-width: 600px;
     margin-left: 12px;
