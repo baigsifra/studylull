@@ -239,3 +239,17 @@ function stopBreathe() {
     clearInterval(breatheInterval);
     breatheInterval = null;
 }
+
+var isHomePage = true;
+
+function showLearn(){
+    if(isHomePage){
+      document.getElementById("desc").innerHTML = "Breathe: Follow the 4-7-8 breathing pattern on the screen to relax. <br><br>Puzzle: Drag and drop the puzzle pieces around to create the full image.<br><br>Generator: Choose to either generate fun facts or small tasks for you to do by clicking one of the yellow buttons and then clicking the generate button. <br><br>Music: Follow the instructions to play a playlist from the embedded player. This works best if you're signed in. <br><br>Study: Click to go into study mode, where you will be free of distractions. A timer helps you see how long you have been on the page. When you need a break, come back to the home page.";
+      document.getElementById("learnBtn").innerHTML = "Go back home";
+      isHomePage = false;
+    } else {
+      document.getElementById("desc").innerHTML = "Learning is hard. Late nights before test nights are even worse. When your eyes are bleary and the glow of the computer screen is the only thing you can see, you won’t be studying at your full potential.<br><br>Studylull brings you the solution. The site features relaxing activities such as breathing exercises, interactive puzzles, and user uploaded Spotify playlists to promote fun and restful study breaks. To occupy your time, you can also generate facts or small tasks to get yourself moving. The study feature blocks out the activies and gives you a focused, distraction-free environment to study with a stopwatch and quick access to the break features.<br><br>Whether it’s for better exam studying, increased motivation, and heightened efficiency, Studylull is here to help.";
+      document.getElementById("learnBtn").innerHTML = "Learn how it works →";
+      isHomePage = true;
+    }
+}
