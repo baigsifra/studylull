@@ -434,7 +434,7 @@ p{
     overflow: hidden;
     display: flex;
     height: 400px;
-    width: 100vw;
+    width: calc(100vw - 20px);
     margin: 0 auto;
     margin-top: 14px;
   }
