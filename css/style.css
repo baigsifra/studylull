@@ -227,9 +227,9 @@ body {
 .roundBorder {
     background-color: #ffffff;
     border-radius: 30px;
-    padding: 20px;
-    margin: 50px;
-    margin-top: 30px;
+    padding: 10px;
+    margin: 100px;
+    margin-top: 50px;
     
 }
 
@@ -261,7 +261,7 @@ button:active{
     background-color: #cba363;
 }
 
-#centerBtn {
+.centerBtn {
     display:flex;
     justify-content: center;
     margin-top: 10px;
@@ -280,6 +280,62 @@ button:active{
 
 .center {
     justify-content:center;
+}
+
+.roundBtn{
+    background-color: #73584D;
+    color: white;
+    font-size: 24px;
+    padding: 60px;
+    padding-top: 30px;
+    padding-bottom:30px;
+    border: none;
+    border-radius: 60px;
+    font-family: 'Karla', sans-serif;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+#learnBtn{
+    margin-bottom: 120px;
+}
+#learnBtn:hover{
+    background-color: #483127;
+}
+
+#bigTitle{
+    font-size: 128px;
+    font-weight:bold;
+    margin:auto;
+    padding-left: 80px;
+    padding-top:0px;
+    padding-bottom: 20px;
+}
+
+#pron{
+    font-size:52px;
+    padding: 10px;
+    padding-left:80px;
+}
+
+#type{
+    font-size:38px;
+    padding: 10px;
+    padding-left:80px;
+}
+
+#def{
+    font-size: 38px;
+    padding: 5px;
+    padding-left:80px;
+}
+
+p{
+    padding: 10px;
+    line-height:2em;
+    font-size: 24px;
+    margin: 40px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 480px) {
@@ -365,3 +421,37 @@ button:active{
 
 }
 
+.scrolling{
+    height: 400px;
+  }
+
+  .container {
+    overflow: hidden;
+    display: flex;
+    height: 400px;
+    width: 100vw;
+    margin: 0 auto;
+    margin-top: 14px;
+  }
+
+  .container div {
+    height: 400px;
+    min-width: 600px;
+    margin-left: 12px;
+    animation: slide 100s linear infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1872px, 0, 0); /* The image width */
+    }
+  }
+
+  img {
+    padding: 0px;
+    margin: 0px;
+    max-width: 100%;
+  }
