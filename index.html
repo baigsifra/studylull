@@ -7,7 +7,7 @@
     <title>studylull</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onload="goToBreak();">
     <header>
         <nav id="main-nav" class="babypink">
             <img id="menu-img" src="img/menu.png" alt="menu">
@@ -43,7 +43,11 @@
         <section id="puzzle"></section>
         <section id="generator"></section>
         <section id="music"></section>
-        <section id="study"></section>
+        <section id="study">
+            <h1>studying</h1>
+            <div id="timer">00:00:00</div>
+            <button class="goBtn" onclick="goToBreak();">go to break</button>
+        </section>
     </main>
 </body>
 <script src="js/main.js"></script>
