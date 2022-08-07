@@ -145,35 +145,32 @@ body {
     margin-left: 25px !important; 
 }
 
-#board {
-    width: 400px;
+#pieces {
+    width: 399px;
     height: 400px;
-    border: 2px solid purple;
-    margin: 0 auto;
+    border: 2px solid rgb(56, 0, 56);
+    margin: 0 15px;
     display: flex;
     flex-wrap: wrap;
+    float: left;
 }
 
-#board img, #pieces img {
+#pieces img {
     width: 79px;
     height: 79px;
-    border: 0.5px solid lightblue;
+    border: 0.5px solid rgb(155, 177, 184);
 }
 
-#pieces {
-    width: 1040px;
-    height: 160px;
-    border: 2px solid purple;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+.puzzle-container {
+    width: fit-content;
+    height: fit-content;
+    margin: 30px auto 0;
 }
 
 @media screen and (min-width: 480px) {
     
     main {
         width: 100%;
-        height: calc(100vh - 100px);
         background-color: #F4F1DE;
     }
 

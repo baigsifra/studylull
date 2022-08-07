@@ -28,9 +28,11 @@ function changeNav(name) {
             nav.setAttribute('class', 'babypink');
             break;
         case ('breathe'):
+            startBreathe();
             nav.setAttribute('class', 'terracotta');
             break;
         case ('puzzle'):
+            loadPuzzle();
             nav.setAttribute('class', 'independence');
             break;
         case ('generator'):
@@ -127,21 +129,7 @@ function changePlaylist() {
 }
 
 function loadPuzzle() {
-    for (let r = 0; r < rows; r++) {
-        for (let c = 0; c < columns; c++) {
-            let tile = document.createElement('img');
-            tile.src = '../img/puzzle/blank.png';
-
-            tile.addEventListener('dragstart', dragStart);
-            tile.addEventListener('dragover', dragOver);
-            tile.addEventListener('dragenter', dragEnter);
-            tile.addEventListener('dragleave', dragLeave);
-            tile.addEventListener('drop', dragDrop);
-            tile.addEventListener('dragend', dragEnd);
-
-            document.getElementById('board').append(tile);
-        }
-    }
+    document.getElementById('pieces').innerHTML = '';
 
     let pieces = [];
     for(let i = 1; i <= rows*columns; i++) {
@@ -208,26 +196,25 @@ function dragEnd() {
 //     setTimeout(addSec, 2000);
 //     setTimeout(addSec, 3000);
 //     setTimeout(addSec, 4000);
-
-    
-
 // }
 
 // function addSec(){
 //     seconds += 1;
 // }
 
-var seconds3 = 0;
-var changingCirc = document.getElementById('circle');
-var instructions = document.getElementById('instructions');
+let seconds3 = 0, fourSec = null;
+const changingCirc = document.getElementById('circle');
+const instructions = document.getElementById('instructions');
 
 function incrementSeconds() {
     seconds3 += 1;
     changingCirc.innerHTML = seconds3;
 }
 
-var fourSec = setInterval(incrementSeconds, 1000);
-stop3();
+function startBreathe() {
+    fourSec = setInterval(incrementSeconds, 1000);
+    stop3();
+}
 
 function stop1() {
     instructions.innerHTML = "Hold.";
