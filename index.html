@@ -52,10 +52,20 @@
             </div>
         </section>
         <section id="generator" style="display: none;">
-            <button type="button" id="gen" onclick="displayFact();">Generate</button>
-            <p id="fact">Fact</p>
-            <button type="button" id="factBtn" onclick="setF()">Facts</button>
-            <button type="button" id="taskBtn" onclick="setT()">Tasks</button>
+
+            <div class="roundBorder">
+                <p id="fact">Choose to generate a fact or a task to do.</p>
+            </div>
+
+            <div id="centerBtn">
+                <button type="button" id="gen" onclick="displayFact();">Generate</button>
+            </div>
+            <div class="buttons center">
+                <button type="button" class="genBtn" id="factBtn" onclick="setF()">Facts</button>
+                <button type="button" class="genBtn" id="taskBtn" onclick="setT()">Tasks</button>
+
+            </div>
+            
         </section>
         <section id="music" style="display: none;">
             <div class="player">

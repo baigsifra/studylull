@@ -152,7 +152,7 @@ function loadPuzzle() {
 
     for(let i = 0; i < pieces.length; i++) {
         let tile = document.createElement('img');
-        tile.src = `../img/puzzle/${pieces[i]}.png`;
+        tile.src = `img/puzzle/${pieces[i]}.png`;
 
         tile.addEventListener('dragstart', dragStart);
         tile.addEventListener('dragover', dragOver);

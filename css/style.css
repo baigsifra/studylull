@@ -86,7 +86,7 @@ body {
     font-size: 60px;
 }
 
-.goBtn {
+.goBtn, .genBtn, #gen {
     background-color: #73584D;
     color: white;
     font-size: 24px;
@@ -94,6 +94,7 @@ body {
     border: none;
     border-radius: 40px;
     display: block;
+    font-family: 'Karla', sans-serif;
 }
 
 .goBtn:hover {
@@ -215,6 +216,70 @@ body {
     font-size:100px;
     text-align: center;
     padding-top: 50px;
+}
+
+#fact {
+    text-align:center;
+    font-size: 24px;
+    padding: 50px;
+}
+
+.roundBorder {
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 50px;
+    margin-top: 30px;
+    
+}
+
+#gen {
+    background-color: #81B29A;
+    text-align:center;
+    margin: 10px;
+    justify-content: center;
+    left:50%;
+    padding: 30px;
+    font-size: 42px;
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+
+#gen:hover{
+    background-color: #689a82;
+}
+
+.genBtn {
+    background-color: #F2CC8F;
+    margin: 10px 40px 40px 20px;
+}
+
+.genBtn:hover{
+    background-color: #cba363;
+}
+
+#centerBtn {
+    display:flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.button {
+    font-family: 'Karla', sans-serif;
+}
+
+.buttons {
+    display:flex;
+    justify-content:center;
+    padding:20px;
+    margin: 40px;
+}
+
+.center {
+    justify-content:center;
 }
 
 @media screen and (max-width: 480px) {
