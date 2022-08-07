@@ -42,13 +42,26 @@
         <section id="breathe"></section>
         <section id="puzzle"></section>
         <section id="generator">
-            <button type="button" id="gen">Generate</button>
+            <button type="button" id="gen" onclick="displayFact();">Generate</button>
             <p id="fact">Fact</p>
             <button type="button" id="factBtn" onclick="setF()">Facts</button>
             <button type="button" id="taskBtn" onclick="setT()">Tasks</button>
         </section>
         <section id="music">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator&theme=0" width="40%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <div class="player">
+                <iframe id="spotify-player" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+            <div class="instructions">
+                <h3>Upload Your Own Playlist</h3>
+                <ol>
+                    <li>Go to <a href="https://open.spotify.com/">Spotify Web Player</a> and open any song, podcast, or playlist</li>
+                    <li>Copy the last part of the url</li>
+                    <img src="img/link.png" alt="a spotify link, with the last part highlighted in a red box">
+                    <li>Paste it into the box below</li>
+                    <input type="text" id="spotify-link">
+                </ol>
+                <button class="goBtn" onclick="changePlaylist()">Go To Playlist</button>
+            </div>
         </section>
         <section id="study">
             <div class="container">
