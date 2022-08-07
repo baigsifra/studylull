@@ -42,22 +42,22 @@
 
     <main>
         <section id="home"></section>
-        <section id="breathe">
+        <section id="breathe" style="display: none;">
             <h2 id="instructions">Breathe In.</h2>
             <div id="circle" class="rainbow">1</div>
         </section>
-        <section id="puzzle">
+        <section id="puzzle" style="display: none;">
             <div class="puzzle-container">
                 <div id="pieces"></div>
             </div>
         </section>
-        <section id="generator">
+        <section id="generator" style="display: none;">
             <button type="button" id="gen" onclick="displayFact();">Generate</button>
             <p id="fact">Fact</p>
             <button type="button" id="factBtn" onclick="setF()">Facts</button>
             <button type="button" id="taskBtn" onclick="setT()">Tasks</button>
         </section>
-        <section id="music">
+        <section id="music" style="display: none;">
             <div class="player">
                 <iframe id="spotify-player" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
             </div>
@@ -73,7 +73,7 @@
                 <button class="goBtn" onclick="changePlaylist()">Go To Playlist</button>
             </div>
         </section>
-        <section id="study">
+        <section id="study" style="display: none;">
             <div class="container">
                 <h1>studying</h1>
                 <div id="timer">00:00:00</div>
