@@ -218,3 +218,53 @@ body {
         width: fit-content;
     }
 }
+
+#circle {
+    background: #df7878;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding-top: 22px;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    animation: rainbow 8s linear, sizeChange 19s;
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rainbow{
+    0%{background-color: #df7878;}
+    10%{background-color: #df9578;}
+    20%{background-color: #dfa378;}
+    30%{background-color: #dfc278;}
+    40%{background-color: #9cdf78;}
+    50%{background-color: #78df82;}
+    60%{background-color: #78dfcc;}
+    70%{background-color: #78acdf;}
+    80%{background-color: #7a78df;}
+    90%{background-color: #df78da;}
+    100% {
+        background-color: #df7878;
+    }
+}
+
+@keyframes sizeChange{
+    0%{
+        transform: scale(1);
+    }
+    21%{
+        transform: scale(2);
+    }
+    57%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
+

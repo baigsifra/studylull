@@ -1,5 +1,6 @@
 const nav = document.getElementById('main-nav');
 const fact = document.getElementById("fact");
+let seconds2 = document.getElementById('circTimer');
 let interval = null;
 let factList = ["Mercury is the fastest planet in our solar system. It zips around our Sun at an average of 172,000 kilometers per hour (107,000 miles per hour)— about 65,000 kph (40,000 mph) faster than Earth. A year on Mercury is equal to 88 Earth days.",
 "Greensboro Lunch Counter - In 1960, four African American college students sat down at the lunch counter at Woolworth’s in Greensboro, North Carolina, and asked to be served, whichwas a huge stance against systemic racial oppression at the time. They inspired many to do the same.",
@@ -121,4 +122,54 @@ function changePlaylist() {
 
     spotifyPlayer.setAttribute('src', `https://open.spotify.com/embed/playlist/${inputLink.value}?utm_source=generator&theme=0`);
     window.onload;
+}
+
+// function breatheTimer() {
+//     setTimeout(addSec, 1000);
+//     setTimeout(addSec, 2000);
+//     setTimeout(addSec, 3000);
+//     setTimeout(addSec, 4000);
+
+    
+
+// }
+
+// function addSec(){
+//     seconds += 1;
+// }
+
+var seconds3 = 0;
+var changingCirc = document.getElementById('circle');
+var instructions = document.getElementById('instructions');
+
+function incrementSeconds() {
+    seconds3 += 1;
+    changingCirc.innerHTML = seconds3;
+}
+
+var fourSec = setInterval(incrementSeconds, 1000);
+stop3();
+
+function stop1() {
+    instructions.innerHTML = "Hold.";
+    clearInterval(fourSec);
+    seconds3 = 0;
+    fourSec = setInterval(incrementSeconds, 1000);
+    setTimeout(stop2, 7000);
+}
+
+function stop2() {
+    instructions.innerHTML = "Breathe out."
+    clearInterval(fourSec);
+    seconds3 = 0;
+    fourSec = setInterval(incrementSeconds, 1000);
+    setTimeout(stop3, 8000);
+}
+
+function stop3(){
+    instructions.innerHTML = "Breathe in.";
+    clearInterval(fourSec);
+    seconds3 = 0;
+    fourSec = setInterval(incrementSeconds, 1000);
+    setTimeout(stop1, 4000);
 }
